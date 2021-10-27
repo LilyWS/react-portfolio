@@ -1,38 +1,199 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /*background-image: url("./assets/background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+}
+
+h1 {
+  font-size: 2.2em;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: slategray;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  line-height: 10vh;
+  background-color: #fff;
+  padding: 0 1vw;
+}
+
+footer {
+  padding-bottom: 3vh;
+  font-size: larger;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav a {
+  padding: 0 .25vw;     
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  /*background-image: url("./assets/background.jpg");
+  background-size: 100% auto;*/
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  text-align: center;
+  padding: 10vh 10vw;
+  min-height: 95vh;
+  background-color: rgba(256, 256, 256, 1);
+}
+
+section h2 {
+  font-size: 2.6em;
+  margin-bottom: 1%;
+  margin-top: 5%;
+}
+
+section p {
+  font-size: 1.3em;
+  line-height: 1.325em;
+}
+
+#about {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align:left;
+  min-height: 95vh;
 }
 
-.App-link {
-  color: #61dafb;
+#about div{
+  max-height: 50vh;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#about img {
+  height: 125%;
+  width: auto;
+  float: right;
+  margin-right: 1%;
+}
+
+#exampleWork {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#exampleWork a {
+  margin: .5vh 0;
+}
+
+#keyboardbattle {
+  background-image: url("./assets/keyboardbattle.PNG");
+  background-size: cover;
+  align-self: stretch;
+  flex-basis: 100%;
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+#terminal-tetris {
+  background-image: url("./assets/terminalTetris.PNG");
+  background-size: cover;
+  align-self: stretch;
+  width: 33%;
+  height: 30vh;
+  position: relative;
+}
+
+#poke-battle {
+  background-image: url("./assets/pokeBattle.PNG");
+  background-size: cover;
+  align-self: stretch;
+  width: 33%;
+  height: 30vh;
+  position: relative;
+}
+
+#neural-network {
+  background-image: url("./assets/neuralnetwork.PNG");
+  background-size: cover;
+  align-self: stretch;
+  width: 33%;
+  height: 30vh;
+  position: relative;
+}
+
+
+
+.description {
+  background-color: rgba(256, 256, 256, .8);
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4em;
+}
+
+
+@media screen and (max-width: 992px) {
+  #horiseon {
+      flex-basis: 50%;
+      width: 50%;
+      height: 30vh;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #terminal-tetris {
+      width: 50%;
   }
+  
+  #terminal-snake {
+      width: 50%;
+      height: 30vh;
+  }
+  
+  #neural-network {
+      width: 50%;
+      height: 30vh;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  #horiseon {
+      flex-basis: 100%;
+      width: 100%;
+      height: 20vh;
+  }
+  
+  #terminal-tetris {
+      width: 100%;
+      height: 20vh;
+  }
+  
+  #terminal-snake {
+      width: 100%;
+      height: 20vh;
+  }
+  
+  #neural-network {
+      width: 100%;
+      height: 20vh;
+  }
+  
 }
